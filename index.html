@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>List of HTML Entity Numbers</title>
+        <style>
+            table thead tr th, table tbody tr td {
+                font-size: 18px;
+                font-family: 'calibri', sans-serif;
+                padding: 9px;
+                border-bottom: 1px solid gray;
+            }
+            table tbody tr td.e-n {
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body style="margin: 0px; padding: 0px;">
+        
+        <h1 style="font-size: 36px;
+                   font-family: 'calibri', sans-serif;
+                   margin: 24px;">List of HTML Entity Numbers</h1>
+        
+        <table style="width: 90%;
+                      margin: 24px;
+                      border: 2px solid black;
+                      border-radius: 6px;">
+            <thead>
+                <tr>
+                    <th>Entity Number</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+        <script>
+            for (var i = 0; i < 6000; i++) {
+                var tr = document.createElement("tr");
+                tr.innerHTML = "<td class=\"e-n\">&amp;#" + i + ";</td><td>&#" + i + ";</td>";
+                document.querySelector("table tbody").appendChild(tr);
+            }
+        </script>
+        
+    </body>
+</html>
